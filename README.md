@@ -43,16 +43,16 @@ to ascending order by clicking on column header.
     .gitignore
 ```
 # Available scripts
-# `yarn start`
+ `yarn start`
    Runs the app in development mode <br>
    [http://localohost:3000](#http://localohost:3000) to view it in browser
 
-# `yarn run build`
-    Builds the app for production to the `build` folder. <br>
+ `yarn run build`
+    Builds the app for production to the `build` folder.
     It bundles React in production mode and optimizes the build for the best performance.
     see the section about [deployment](#deployment) for more information.
 
-# `yarn run eject`
+ `yarn run eject`
 
 ** Note: This is a one-way operation. Once you `eject`, you can't go back! **
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
