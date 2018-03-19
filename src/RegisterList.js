@@ -24,8 +24,7 @@ class RegisterList extends Component{
 
   }
 
-  componentDidMount(){
-    console.log('abc');
+  componentWillMount(){
     this.setState({
       name: this.props.entries.name,
       email : this.props.entries.email,
@@ -34,10 +33,10 @@ class RegisterList extends Component{
   }
 
   toggleEdit(){
-    const isEditing = this.state.isEditing;
-    this.setState({
-      isEditing : !isEditing,
-    });
+      const isEditing = this.state.isEditing;
+      this.setState({
+        isEditing : !isEditing,
+      });
   }
 
   change(e){
@@ -60,7 +59,7 @@ class RegisterList extends Component{
   }
 
   editParticipant(){
-    return(
+      return(
         <tr>
           <td>
             <input type='text' name ='name'

@@ -234,9 +234,9 @@ class SignUp extends Component {
           <table>
             <thead>
               <tr className = 'tableHeader'>
-                <th onClick ={this.sortParticipants}>FullName</th>
-                <th>Email address</th>
-                <th>PhoneNumber</th>
+                <th onClick ={this.sortItems}>FullName</th>
+                <th onClick ={this.sortItems}>Email address</th>
+                <th onClick ={this.sortItems}>PhoneNumber</th>
                 <th></th>
                 <th></th>
               </tr>
