@@ -51,7 +51,7 @@ to ascending order by clicking on column header.
 ###  `yarn run build`
     Builds the app for production to the `build` folder.
     It bundles React in production mode and optimizes the build for the best performance.
-    see the section about [deployment](#development-workflow) for more information.
+    see the section about [deployment](https://reactjs.org/docs/how-to-contribute.html#development-workflow) for more information.
 
 ###   `yarn run eject`
 
