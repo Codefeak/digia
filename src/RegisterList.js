@@ -17,7 +17,6 @@ class RegisterList extends Component{
 
     this.createList =this.createList.bind(this);
     this.deleteParticipant = this.deleteParticipant.bind(this);
-    this.sortParticipants = this.sortParticipants.bind(this);
     this.editParticipant = this.editParticipant.bind(this);
     this.updateParticipant = this.updateParticipant.bind(this);
     this.toggleEdit = this.toggleEdit.bind(this);
@@ -52,10 +51,6 @@ class RegisterList extends Component{
 
   deleteParticipant(key){
     this.props.delete(key);
-  }
-
-  sortParticipants(name){
-    this.props.sort(name);
   }
 
   editParticipant(){

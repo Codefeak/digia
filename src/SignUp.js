@@ -16,38 +16,55 @@ class SignUp extends Component {
       phoneNumber: '',
       phoneNumberError:'',
       key:'',
+      sortDirection:{
+        name:'asc',
+        email:'asc',
+        phoneNumber:'asc',
+      },
       participants:[
         { id:0, name:'Susana Huolto',
-          email: 'susanna.huolto@digia.com',
-          phoneNumber:'0445566256',
+          email: 'susanna_huolto@digia.com',
+          phoneNumber:'+358445566256',
           key:uniqid()},
         { id:1, name: 'Susanna Maharjan',
-          email: 'susanna.yamamoto@digia.com',
-          phoneNumber:'0445566256',
+          email: 'susanna_maharjan@digia.com',
+          phoneNumber:'+358445566256',
           key:uniqid()},
         { id:2, name: 'Susanna Jarvi',
-          email: 'susanna.yamamoto@digia.com',
-          phoneNumber:'0445566256',
+          email: 'susanna_jarvi@digia.com',
+          phoneNumber:'+358445566256',
           key:uniqid()},
-        { id:3, name: 'Susanna Yamamoto',
-          email: 'susanna.yamamoto@digia.com',
-          phoneNumber:'0445566256',
+        { id:3, name: 'Meeri Laitinen',
+          email: 'meeri_Laitinen@digia.com',
+          phoneNumber:'+358445566256',
           key:uniqid()},
-        { id:4, name: 'Susanna Yamamoto',
-          email: 'susanna.yamamoto@digia.com',
-          phoneNumber:'0445566256',
+        { id:4, name: 'Velio Vesterinen',
+          email: 'velio_vesterinen@digia.com',
+          phoneNumber:'+358445566256',
           key:uniqid()},
         { id:5, name: 'Susanna Yamamoto',
-          email: 'susanna.yamamoto@digia.com',
-          phoneNumber:'0445566256',
+          email: 'susanna_yamamoto@digia.com',
+          phoneNumber:'+358445566256',
           key:uniqid()},
-        { id:6, name: 'Susanna Yamamoto',
-          email: 'susanna.yamamoto@digia.com',
-          phoneNumber:'0445566256',
+        { id:6, name: 'Minna Jarvi',
+          email: 'minna_Jarvi@digia.com',
+          phoneNumber:'+977445566256',
           key:uniqid()},
         { id:7, name: 'Cherry Hilton',
-          email: 'cherry.hilto@digia.com',
-          phoneNumber:'0445566256',
+          email: 'cherry_hilto@digia.com',
+          phoneNumber:'+358445566256',
+          key:uniqid()},
+        { id:8, name: 'Rajiv Shakya',
+          email: 'rajiv_shakya@digia.com',
+          phoneNumber:'+358445566256',
+          key:uniqid()},
+        { id:9, name: 'Binod Thakur',
+          email: 'binod_thakur@digia.com',
+          phoneNumber:'+358445566256',
+          key:uniqid()},
+        { id:10, name: 'Jitendra Hada',
+          email: 'jitendra_hada@digia.com',
+          phoneNumber:'+358445566256',
           key:uniqid()},
       ]
     };
@@ -161,21 +178,21 @@ class SignUp extends Component {
     });
   }
 
-  sortItems(){
-    let fields = this.state.participants;
-    let reversed = this.state.participants.reverse();
-    let sortedList = this.state.participants.sort(function(a,b){
-      let nameA = a.name;
-      let nameB = b.name;
-      if (nameA < nameB){ return -1;}
-      if(nameA > nameB) { return 1;}
-      return 0;
+
+
+  sortItems(key){
+    this.setState({
+      participants:this.state.participants.sort((a,b) => (
+        this.state.sortDirection[key]==='asc'
+        ? a[key] < b[key]
+        : a[key] > b[key]
+      )),
+      sortDirection: {
+        [key] : this.state.sortDirection[key] === 'asc'
+        ? 'desc'
+        : 'asc'
+      }
     });
-    if(fields['fullName'] === sortedList['fullName']) {
-    this.setState({ participants:reversed });
-    }else{
-      this.setState({ participants:sortedList });
-    }
   }
 
   render(){
@@ -234,9 +251,9 @@ class SignUp extends Component {
           <table>
             <thead>
               <tr className = 'tableHeader'>
-                <th onClick ={this.sortItems}>FullName</th>
-                <th onClick ={this.sortItems}>Email address</th>
-                <th onClick ={this.sortItems}>PhoneNumber</th>
+                <th onClick ={()=>this.sortItems('name')}>FullName</th>
+                <th onClick ={()=>this.sortItems('email')}>Email address</th>
+                <th onClick ={()=>this.sortItems('phoneNumber')}>PhoneNumber</th>
                 <th></th>
                 <th></th>
               </tr>
@@ -245,7 +262,6 @@ class SignUp extends Component {
             {this.state.participants.map((participants) => {
               return <RegisterList entries={participants}
                             delete = {this.deleteItem}
-                            sort = {this.sortItems}
                             key = {participants.key}
                             />
               })
