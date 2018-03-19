@@ -1,0 +1,162 @@
+.signUpContainer{
+  width:912px;
+}
+.signUpContainer .inputs  {
+  width:912px;
+  height: auto;
+  background-color: #FFF;
+}
+
+.signUpContainer .inputs .listTable {
+  width :100%;
+}
+.signUpContainer .inputs .listTable .email-td{
+  width:300px;
+}
+.form-group{
+
+  margin: 16px;
+  font-size: 16px;
+  height:40px;
+  background-color: #FAFAFA;
+  text-indent:10px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #EEEEEE;
+  color:#757575;
+}
+
+.form-control {
+  width: 80%;
+  margin-left: 16px;
+  font-size: 16px;
+  height:40px;
+  background-color: #FAFAFA;
+  text-indent:10px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #EEEEEE;
+  color:#757575;
+}
+.form-control-edit{
+  width: 90%;
+  font-size: 16px;
+  height:40px;
+  background-color: #FAFAFA;
+  text-indent:10px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #EEEEEE;
+  color:#757575;
+}
+
+.help-block{
+  margin-top:5px;
+  margin-left:16px;
+  font-size: 12px;
+  color : red;
+  display: block;
+}
+
+.signUpContainer .inputs button{
+  float:right;
+  height: 40px;
+  margin: 16px;
+  padding:0px 20px;
+  border: none;
+  background-color: #EEEEEE;
+  color:#757575;
+  font-weight:bold;
+}
+.registerList {
+  margin-top: 10px;
+  width:912px;
+  height:inherit;
+
+}
+.registerList table {
+  width:912px;
+  border-color: transparent;
+  -webkit-border-horizontal-spacing: 0px;
+}
+
+.registerList thead{
+  width:auto;
+  background-color: #FFFFFF;
+  border: 2px solid #EEEEEE;
+}
+.registerList .tableHeader{
+  height:48px;
+}
+
+.registerList tbody{
+  width:912px;
+}
+
+.registerList th{
+  height: 48px;
+  line-height: 14px;
+  padding-left:24px;
+  text-align: left;
+  color:#757575;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.registerList td{
+  line-height: 24px;
+  padding-left: 24px;
+  text-align: left;
+  color:#505050;
+  font-size: 16px;
+  font-weight: 400;
+  color:#757575;
+}
+
+.registerList tr{
+  border: 1px solid #EEEEEE;
+  height: 72px;
+  margin:24px;
+  background-color: #FFF;
+}
+
+.btn-cancel{
+  color:#07F;
+  height: 40px;
+  padding:0px 20px;
+  background-color: #EEEEEE;
+  font-size: 16px;
+  font-weight:500;
+  border:none;
+}
+.btn-save{
+  color:#FFFFFF;
+  height: 40px;
+  padding:0px 20px;
+  background-color: #07F;
+  font-size: 16px;
+  font-weight:500;
+  border:none;
+}
+
+ .create {
+  height: 24px;
+  width: 24px;
+  fill:#909090;
+}
+.create :hover{
+ height: 24px;
+ width: 24px;
+ fill:#333333;
+}
+
+ .delete {
+  height: 24px;
+  width: 24px;
+  fill:#909090;
+}
+.delete :hover{
+ height: 24px;
+ width: 24px;
+ fill:#333333;
+}

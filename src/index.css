@@ -1,0 +1,45 @@
+body{
+background-color: #FFFFFF;
+}
+
+#a{
+  background-color: #FFFFFF;
+  font-family: sans-serif;
+}
+#mainContainer{
+  width:959px;
+  height:auto;
+  margin-top: -8px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #EEEEEE;
+}
+#container{
+  margin:4px 32px;
+}
+
+#header{
+  background-color: #ADB5BD;
+  padding: 32px;
+}
+
+#sub-header{
+  padding:48px 32px 24px ;
+}
+img{
+  position: absolute;
+  width:32px;
+  height:32px;
+  margin-top:32px;
+
+}
+
+h2{
+  margin-top :32px;
+  margin-left:48px;
+  color:#FFF;
+}
+
+h3{
+  color:#777777;
+}
