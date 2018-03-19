@@ -45,7 +45,7 @@ to ascending order by clicking on column header.
 ## Available scripts
 #  `yarn start`
    Runs the app in development mode <br>
-   [http://localhost:3000](#http://localhost:3000) to view it in browser
+   [http://localhost:3000](http://localhost:3000) to view it in browser
 
 #  `yarn run build`
     Builds the app for production to the `build` folder.
